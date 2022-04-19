@@ -1,0 +1,36 @@
+package me.ruyeo.composewithstevdza.screen
+
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import me.ruyeo.composewithstevdza.component.AnimatedShimmer
+import me.ruyeo.composewithstevdza.screen.route.Screen
+
+@Composable
+fun HomeScreen(
+    navController: NavController
+) {
+    Column() {
+        repeat(7){
+            AnimatedShimmer()
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun HomeScreenPreview() {
+    HomeScreen(
+        navController = rememberNavController()
+    )
+}
